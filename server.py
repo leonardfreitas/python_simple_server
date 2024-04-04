@@ -1,7 +1,8 @@
 import http.server
 import socketserver
+from decouple import config
 
-PORT = 8080
+PORT = config('PORT', cast=int)
 
 # http.server.SimpleHTTPRequestHandler: um manipulador de 
 # solicitações HTTP simples que serve arquivos do diretório 
